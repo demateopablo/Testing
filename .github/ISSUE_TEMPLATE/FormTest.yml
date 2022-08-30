@@ -1,0 +1,62 @@
+
+name: Issue con Form
+description: Crear un issue con un formulario
+title: AP "X" - Descripción
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Prueba de issue con Formulario.
+  - type: input
+    id: nodo
+    attributes:
+      label: Nodo afectado
+      description: "¿Qué nodo estás reportando?"
+      placeholder: "AP Cementerio MK1"
+    validations:
+      required: true 
+  - type: dropdown
+    id: servicio
+    attributes:
+      label: ¿Los clientes tienen servicio?
+      description: Indicá si los clientes tienen navegación, o no.
+      options:
+        - Tienen servicio
+        - Sin servicio
+        - Tienen servicio, pero degradado
+    validations:
+      required: true      
+  - type: input
+    id: laravel
+    attributes:
+      label: ¿Qué reclaman?
+      description: "Por favor indicá qué reclaman los clientes."
+      placeholder: "Lentitud"
+    validations:
+      required: true
+  - type: input
+    id: cantidadClientes
+    attributes:
+      label: Cantidad de clientes afectados
+      description: "Ingresá la cantidad aproximada de clientes afectados."
+      placeholder: "15"
+    validations:
+      required: true
+  - type: textarea
+    id: descripcionDelProblema
+    attributes:
+      label: Descripción del problema
+      description: ¿Qué está sucediendo?
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducir el problema.
+      description: Si es necesario, ingresá los pasos necesarios para reproducir el inconveniente.
+  - type: textarea
+    id: comentarios
+    attributes:
+      label: Observaciones
+      description:
+      render: shell
